@@ -67,10 +67,6 @@ public class FXMLController {
     	String lingua = cmbBox.getValue();
     	String testo = txtField.getText();
     	List<String> errori = model.correggi(lingua, testo);
-    	if (errori == null) {
-    		txtArea.setText("You need to select a language");
-    		return;
-    	}
     	for (String p : errori) {
     		txtArea.appendText(p);
     		txtArea.appendText("\n");
